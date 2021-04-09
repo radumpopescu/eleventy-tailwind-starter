@@ -1,0 +1,19 @@
+{
+  "name": "eleventy-tailwind-starter",
+  "version": "1.0.0",
+  "description": "An Eleventy Tailwind starter with JIT compiler",
+  "author": "Radu Popescu",
+  "scripts": {
+    "start": "eleventy --serve & postcss src/styles/tailwind.css --o _tmp/style.css --watch",
+    "build": "ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production postcss src/styles/tailwind.css --o dist/style.css && cleancss dist/style.css -o dist/style.css"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.2.5",
+    "clean-css-cli": "^5.2.2",
+    "html-minifier": "^4.0.0",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.1"
+  }
+}
